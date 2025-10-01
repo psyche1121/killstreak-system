@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-v1.0.0-orange.svg)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)
 
-# ?? Killstreak System 连杀系统 | Killstreak System
+#  Killstreak System 连杀系统 | Killstreak System
 
 一个轻量级的 Lua 连杀统计模块，适用于游戏服务端。支持击杀者提示、全服公告、死亡清除、地图切换重置等功能，兼容自定义接口文件（Functions.txt 与 Bridges.txt），可扩展奖励机制与特效展示。
 
@@ -11,7 +11,7 @@ A lightweight Lua-based killstreak tracking system for game servers. Supports ki
 
 ---
 
-## ?? 功能 Features
+##  功能 Features
 
 - ? 连杀统计 Killstreak tracking
 - ? 击杀者提示 Killer notifications
@@ -22,7 +22,7 @@ A lightweight Lua-based killstreak tracking system for game servers. Supports ki
 
 ---
 
-## ??? 使用方法 Usage
+##  使用方法 Usage
 
 ### 注册桥接点 Register bridge functions
 
