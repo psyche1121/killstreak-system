@@ -2,6 +2,9 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Version](https://img.shields.io/badge/version-v1.0.0-orange.svg)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)
+![Stars](https://img.shields.io/github/stars/psyche1121/killstreak-system?style=social)
+![Forks](https://img.shields.io/github/forks/psyche1121/killstreak-system?style=social)
+
 
 #  Killstreak System 连杀系统 | Killstreak System
 
@@ -61,7 +64,7 @@ killstreak-system/
 └── assets/                    # 截图或图标 Screenshots
 
 
-![连杀提示截图](assets/screenshot-killstreak.png)
+![连杀提示截图](assets/sample01.png)
 
 本项目采用 MIT License，可自由使用、修改、分发。
 
