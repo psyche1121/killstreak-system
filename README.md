@@ -1,70 +1,75 @@
-# ?? Killstreak System Á¬É±ÏµÍ³ | Killstreak System
+![Lua](https://img.shields.io/badge/language-Lua-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Version](https://img.shields.io/badge/version-v1.0.0-orange.svg)
+![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)
 
-Ò»¸öÇáÁ¿¼¶µÄ Lua Á¬É±Í³¼ÆÄ£¿é£¬ÊÊÓÃÓÚÓÎÏ··şÎñ¶Ë¡£Ö§³Ö»÷É±ÕßÌáÊ¾¡¢È«·ş¹«¸æ¡¢ËÀÍöÇå³ı¡¢µØÍ¼ÇĞ»»ÖØÖÃµÈ¹¦ÄÜ£¬¼æÈİ×Ô¶¨Òå½Ó¿ÚÎÄ¼ş£¨Functions.txt Óë Bridges.txt£©£¬¿ÉÀ©Õ¹½±Àø»úÖÆÓëÌØĞ§Õ¹Ê¾¡£
+# ?? Killstreak System è¿æ€ç³»ç»Ÿ | Killstreak System
+
+ä¸€ä¸ªè½»é‡çº§çš„ Lua è¿æ€ç»Ÿè®¡æ¨¡å—ï¼Œé€‚ç”¨äºæ¸¸æˆæœåŠ¡ç«¯ã€‚æ”¯æŒå‡»æ€è€…æç¤ºã€å…¨æœå…¬å‘Šã€æ­»äº¡æ¸…é™¤ã€åœ°å›¾åˆ‡æ¢é‡ç½®ç­‰åŠŸèƒ½ï¼Œå…¼å®¹è‡ªå®šä¹‰æ¥å£æ–‡ä»¶ï¼ˆFunctions.txt ä¸ Bridges.txtï¼‰ï¼Œå¯æ‰©å±•å¥–åŠ±æœºåˆ¶ä¸ç‰¹æ•ˆå±•ç¤ºã€‚
 
 A lightweight Lua-based killstreak tracking system for game servers. Supports killer notifications, global announcements, death resets, and map-switch resets. Fully compatible with custom interface files (Functions.txt and Bridges.txt), and extensible with rewards and visual effects.
 
 ---
 
-## ?? ¹¦ÄÜ Features
+## ?? åŠŸèƒ½ Features
 
-- ? Á¬É±Í³¼Æ Killstreak tracking
-- ? »÷É±ÕßÌáÊ¾ Killer notifications
-- ? È«·ş¹ã²¥ Global announcements
-- ? ËÀÍöÇå³ı Death reset
-- ? µØÍ¼ÇĞ»»Çå³ı Map switch reset
-- ? ¿ÉÀ©Õ¹½±Àø¡¢³ÆºÅ¡¢ÌØĞ§ Extensible rewards, titles, effects
+- ? è¿æ€ç»Ÿè®¡ Killstreak tracking
+- ? å‡»æ€è€…æç¤º Killer notifications
+- ? å…¨æœå¹¿æ’­ Global announcements
+- ? æ­»äº¡æ¸…é™¤ Death reset
+- ? åœ°å›¾åˆ‡æ¢æ¸…é™¤ Map switch reset
+- ? å¯æ‰©å±•å¥–åŠ±ã€ç§°å·ã€ç‰¹æ•ˆ Extensible rewards, titles, effects
 
 ---
 
-## ??? Ê¹ÓÃ·½·¨ Usage
+## ??? ä½¿ç”¨æ–¹æ³• Usage
 
-### ×¢²áÇÅ½Óµã Register bridge functions
+### æ³¨å†Œæ¡¥æ¥ç‚¹ Register bridge functions
 
 ```lua
 BridgeFunctionAttach("OnCheckUserKiller", "TemplateScript_OnCheckUserKiller")
 BridgeFunctionAttach("TemplateScript_OnUserDie")
 BridgeFunctionAttach("TemplateScript_OnUserMove")
 
-ÒıÈëÖ÷½Å±¾ Include main script
-½« killstreak.lua ·ÅÈë·şÎñ¶Ë½Å±¾Ä¿Â¼£¬²¢ÔÚ³õÊ¼»¯Ê±¼ÓÔØ¡£
+å¼•å…¥ä¸»è„šæœ¬ Include main script
+å°† killstreak.lua æ”¾å…¥æœåŠ¡ç«¯è„šæœ¬ç›®å½•ï¼Œå¹¶åœ¨åˆå§‹åŒ–æ—¶åŠ è½½ã€‚
 
 Place killstreak.lua in your server's script directory and load it during initialization.
 
-Äã¿ÉÒÔÔÚ config.lua ÖĞ×Ô¶¨ÒåÊ±¼ä´°¿ÚÓëÌáÊ¾ÎÄ±¾£º
+ä½ å¯ä»¥åœ¨ config.lua ä¸­è‡ªå®šä¹‰æ—¶é—´çª—å£ä¸æç¤ºæ–‡æœ¬ï¼š
 
 Customize streak timeout and messages in config.lua:
 return {
     STREAK_TIMEOUT = 30,
     messages = {
-        [2] = "Ë«É±£¡",
-        [3] = "ÈıÁ¬¾öÊ¤£¡",
-        [4] = "³¬Éñ£¡",
-        [5] = "ÎŞÈËÄÜµ²£¡"
+        [2] = "åŒæ€ï¼",
+        [3] = "ä¸‰è¿å†³èƒœï¼",
+        [4] = "è¶…ç¥ï¼",
+        [5] = "æ— äººèƒ½æŒ¡ï¼"
     }
 }
 
 
 
 killstreak-system/
-©À©¤©¤ killstreak.lua             # Ö÷½Å±¾ Main script
-©À©¤©¤ config.lua                 # ÅäÖÃÎÄ¼ş Config
-©À©¤©¤ README.md                  # ÏîÄ¿ËµÃ÷ÎÄµµ Documentation
-©À©¤©¤ LICENSE                    # ¿ªÔ´Ğí¿ÉÖ¤ License
-©À©¤©¤ .gitignore                 # ºöÂÔÎÄ¼ş Git ignore rules
-©À©¤©¤ docs/                      # ½Ó¿ÚÎÄµµ Interfaces
-©¸©¤©¤ assets/                    # ½ØÍ¼»òÍ¼±ê Screenshots
+â”œâ”€â”€ killstreak.lua             # ä¸»è„šæœ¬ Main script
+â”œâ”€â”€ config.lua                 # é…ç½®æ–‡ä»¶ Config
+â”œâ”€â”€ README.md                  # é¡¹ç›®è¯´æ˜æ–‡æ¡£ Documentation
+â”œâ”€â”€ LICENSE                    # å¼€æºè®¸å¯è¯ License
+â”œâ”€â”€ .gitignore                 # å¿½ç•¥æ–‡ä»¶ Git ignore rules
+â”œâ”€â”€ docs/                      # æ¥å£æ–‡æ¡£ Interfaces
+â””â”€â”€ assets/                    # æˆªå›¾æˆ–å›¾æ ‡ Screenshots
 
 
-![Á¬É±ÌáÊ¾½ØÍ¼](assets/screenshot-killstreak.png)
+![è¿æ€æç¤ºæˆªå›¾](assets/screenshot-killstreak.png)
 
-±¾ÏîÄ¿²ÉÓÃ MIT License£¬¿É×ÔÓÉÊ¹ÓÃ¡¢ĞŞ¸Ä¡¢·Ö·¢¡£
+æœ¬é¡¹ç›®é‡‡ç”¨ MIT Licenseï¼Œå¯è‡ªç”±ä½¿ç”¨ã€ä¿®æ”¹ã€åˆ†å‘ã€‚
 
 This project is licensed under the MIT License. Free to use, modify, and distribute.
 
 
 ---
 
-ÓÉ³ş³ş±±±Ç¿ª·¢£¬×¨×¢ÓÚÄ£¿é»¯¡¢¿ÉÀ©Õ¹¡¢Ò×¼¯³ÉµÄÓÎÏ··şÎñ¶Ë½Å±¾ÏµÍ³¡£»¶Ó­·´À¡½¨ÒéÓë¸Ä½ø£¡
+ç”±æ¥šæ¥šåŒ—é¼»å¼€å‘ï¼Œä¸“æ³¨äºæ¨¡å—åŒ–ã€å¯æ‰©å±•ã€æ˜“é›†æˆçš„æ¸¸æˆæœåŠ¡ç«¯è„šæœ¬ç³»ç»Ÿã€‚æ¬¢è¿åé¦ˆå»ºè®®ä¸æ”¹è¿›ï¼
 
 Created by ChuChuBaby, focused on modular, extensible, and easy-to-integrate server scripting. Feedback and contributions welcome!
